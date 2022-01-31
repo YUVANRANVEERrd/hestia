@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=!!!, initial-scale=1.0">
+    <title>Hestia Design Studio</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sec1{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)) ,url("bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/**************************/
+.navbar{
+    background-color: black;
+    width: 100%;
+    height: 100px;
+}
+.navbar .logo{
+    font-size: 50px;
+    line-height: 100px;
+    margin: 20px;
+    font-family: monospace;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: ivory;
+    transition: 0.5s;
+}
+.navbar .logo:hover{
+    letter-spacing: 5px;
+}
+.navbar .link{
+    float: right;
+    list-style: none;
+}
+.navbar .link li{
+    display: inline-block;
+    margin-right: 50px;
+    line-height: 100px;
+}
+.navbar .link li a{
+    color: ivory;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.navbar .link li a:hover{
+    text-shadow: 0 0 20px ivory;
+}
+.navbar .icon{
+    display: none;
+    float: right;
+    color: ivory;
+    font-size: 32px;
+    line-height: 100px;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+.navbar .icon:hover{
+    color:rgb(25, 169, 226);
+}
+@media screen and (max-width: 1000px) {
+    .navbar .link{
+        display: none;
+    }
+    .navbar .icon{
+        display: block;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .navbar.responsive{
+        position: relative;
+    }
+    .navbar.responsive .icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .navbar.responsive .link{
+        background-color: black;
+        width: 100%;
+        height: 80vh;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar.responsive .link li{
+        margin-top: 20px;
+        margin-left: 47px;
+    }
+    .navbar.responsive .link li a{
+        font-size: 24px;
+        letter-spacing: 5px;
+        transition: 0.2s;
+    }
+    .navbar.responsive .link li a:hover{
+        letter-spacing: 10px;
+    }
+}
+/************************/
+.slideshow{
+    max-width: 1000px;
+    aspect-ratio: 2 / 1;
+    background-color: rgb(12, 12, 12);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px auto;
+}
+.slideshow .image{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.slideshow .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+/************************/
+.sec1 .content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec1 .content h1{
+    text-align: center;
+    color: ivory;
+    font-family: monospace;
+    font-size: 40px;
+    font-variant: small-caps;
+    letter-spacing: 5px;
+    transition: 0.2s ease-in-out;
+}
+.sec1 .content h1:hover{
+    letter-spacing: 10px;
+}
+.sec1 .content h3{
+    text-align: center;
+    color: ivory;
+    font-size: 22px;
+    font-family: monospace;
+    margin-top: 5px;
+    letter-spacing: 15px;
+    font-variant: small-caps;
+}
+.sec1 .content .btn{
+    width: 200px;
+    height: 50px;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    background-color: transparent;
+    font-weight: bold;
+    border: 2px solid rgb(25, 169, 226);
+    border-radius: 50px;
+    color: rgb(25, 169, 226);
+    font-size: 22px;
+    font-family: monospace;
+    font-variant: small-caps;
+    transition: 0.2s ease-in;
+}
+.sec1 .content .btn:hover{
+    background-color: rgb(25, 169, 226);
+    color: black;
+    box-shadow: 0 0 25px 2px rgb(25, 169, 226);
+    width: 250px;
+    letter-spacing: 10px;
+}
+/**************************/
+/**************************/
+/**************************/
+.sec2{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)) ,url("bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sec2 .content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.sec2 .content .left{
+    width: 50%;
+    height: 100vh;
+    padding-right: 20px;
+    position: relative;
+}
+.sec2 .content .left img{
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 50px;
+    border: 2px solid ivory;
+    border-radius: 10px;
+}
+.sec2 .content .left h1{
+    margin-left: 100px;
+    margin-top: 20px;
+    color: ivory;
+    font-family: monospace;
+    font-variant: small-caps;
+    font-size: 26px;
+}
+.sec2 .content .left h2{
+    margin-left: 97px;
+    color: ivory;
+    font-family: monospace;
+    font-variant: small-caps;
+    font-size: 36px;
+}
+.sec2 .content .left p{
+    color: ivory;
+    margin-left: 97px;
+    font-family: monospace;
+    font-variant: small-caps;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.sec2 .content .right{
+    padding-right: 20px;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 5), rgba(0, 0, 0, 0.1));
+}
+.sec2 .content .right h1{
+    margin-left: 50px;
+    margin-top: 100px;
+    color: ivory;
+    font-family: monospace;
+    font-variant: small-caps;
+    font-size: 46px;
+}
+.sec2 .content .right p{
+    color: ivory;
+    font-family: monospace;
+    font-variant: small-caps;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+@media screen and (max-width: 1000px) {
+    .sec2{
+        width: 100%;
+        height: 200vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)) ,url("bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .sec2 .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec2 .content .left{
+        width: 100%;
+        height: 100vh;
+        display: block;
+        padding-right: 0;
+        padding: 20px;
+    }
+    .sec2 .content .left img{
+        width: 400px;
+        margin: 50px auto;
+        display: block;
+        border: 2px solid ivory;
+        border-radius: 10px;
+    }
+    .sec2 .content .left h1{
+        margin-left: 0;
+        text-align: center;
+        color: ivory;
+        font-family: monospace;
+        font-variant: small-caps;
+        font-size: 26px;
+    }
+    .sec2 .content .left h2{
+        margin-left: 0;
+        text-align: center;
+        color: ivory;
+        font-family: monospace;
+        font-variant: small-caps;
+        font-size: 36px;
+    }
+    .sec2 .content .left p{
+        margin-left: 0;
+        text-align: center;
+        color: ivory;
+        font-family: monospace;
+        font-variant: small-caps;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .sec2 .content .right{
+        width: 100%;
+        height: 100vh;
+        padding-right: 0px;
+        padding: 50px;
+        padding-top: 0;
+        background: linear-gradient(rgba(0, 0, 0, 5), rgba(0, 0, 0, 0.1));
+    }
+    .sec2 .content .right h1{
+        text-align: left;
+        color: ivory;
+        font-family: monospace;
+        font-variant: small-caps;
+        font-size: 46px;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    .sec2 .content .right p{
+        color: ivory;
+        font-family: monospace;
+        font-variant: small-caps;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+/****************************************/
+/****************************************/
+/****************************************/
+#backbtn{
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: 2px solid rgb(25, 169, 226);
+    background: black;
+    box-shadow: 0 0 15px 2px rgb(25, 169, 226);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    color: rgb(25, 169, 226);
+    font-family: monospace;
+    font-variant: small-caps;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+</style>
+    <section class="sec1">
+        <div class="navbar" id="navbar">
+            <label class="logo">Hestia</label>
+            <ul class="link">
+                <li><a href="#">home</a></li>
+                <li><a href="#">design</a></li>
+                <li><a href="#">interiors</a></li>
+                <li><a href="#">plans</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="myFun()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="slideshow">
+            <div class="image">
+                <img src="img_1.png">
+            </div>
+            <div class="image">
+                <img src="img_2.png">
+            </div>
+            <div class="image">
+                <img src="img_3.png">
+            </div>
+            <div class="image">
+                <img src="img_4.png">
+            </div>
+            <div class="image">
+                <img src="img_5.png">
+            </div>
+        </div>
+        <div class="content">
+            <h1>Hestia Design Studio</h1>
+            <h3>To build your dreams</h3>
+            <button class="btn">learn more</button>
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="content">
+            <div class="left">
+                <img src="ram.png" class="ram">
+                <h1>R Ram Saran</h2>
+                <h2>Chief Architect</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur <br>adipisicing elit. Aperiam culpa doloribus, esse dolorem qui<br> voluptate cumque deleniti odit velit eveniet! Amet, ut distinctio et<br> inventore mollitia dicta nihil commodi ad?</p>
+            </div>
+            <div class="right">
+                <h1>What do we do?</h1>
+                <p>Lorem ipsum quibusdam rem recusandae distinctio culpa similique facilis? Repudiandae quos ut voluptates, quia incidunt repellendus perspiciatis, obcaecati nulla laudantium temporibus vitae similique quis consequuntur est porro alias quisquam id facere quibusdam accusantium reiciendis, aspernatur minus magni. Corporis iste dolorem enim adipisci incidunt alias commodi architecto itaque ea, quod totam quam odio pariatur! Deleniti cumque placeat magni earum nisi non consequuntur mollitia ab necessitatibus blanditiis neque, numquam illo quos beatae voluptatum ratione sequi fugit, repellat laboriosam, soluta esse. Ex, non ipsa.</p>
+                <h1>Best Interior Designs</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vero cumque libero voluptate, dolore nobis ipsum ad odit necessitatibus, eos quos dolorum neque maxime laudantium, fuga labore quaerat sunt. Fugit fuga ipsum voluptatem minima atque accusantium laborum quis eveniet quia.</p>
+            </div>
+        </div>
+    </section>
+    <button onclick="backTop()" id="backbtn">Go to Top</button>
+    <script>
+        var slideIndex = 1;
+        showSlide();
+
+        function showSlide() {
+            var i;
+            var slide = document.getElementsByClassName("image");
+            for (i = 0; i < slide.length; i++){
+                slide[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slide.length) {
+                slideIndex = 1
+            }
+            slide[slideIndex-1].style.display = "block";
+            setTimeout(showSlide, 5000);
+        }
+        // ******************************
+        
+        function myFun() {
+            var x = document.getElementById("navbar");
+            if(x.className === "navbar"){
+                x.className += " responsive";
+            }
+            else{
+                x.className = "navbar";
+            }
+        }
+        // ********************************
+        backtotop = document.getElementById("backbtn");
+        window.onscroll = function() {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                backtotop.style.display = "block";
+            }
+            else{
+                backtotop.style.display = "none";
+            }
+        }
+        function backTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
